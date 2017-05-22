@@ -29,13 +29,7 @@ class Product{
     }
 
     fun search(code: String): Product? {
-
-        for (p in dataList){
-            if(p.code.equals(code)){
-                return p
-            }
-        }
-        return null
+        return dataList.find { it.code == code }
     }
 
     fun containCode(code: String): Boolean {
